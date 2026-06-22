@@ -1,0 +1,17 @@
+2024-03-15 14:05:00 INFO  Deploying auth-service v1.8.0 to production cluster
+2024-03-15 14:05:01 INFO  Image pulled: registry.internal/auth-service:1.8.0
+2024-03-15 14:05:02 INFO  Creating Kubernetes pod auth-service-7d9f8b-x4k2p
+2024-03-15 14:05:03 INFO  Container started, waiting for health check...
+2024-03-15 14:05:07 WARN  Health check attempt 1/5 failed: connection refused on port 8080
+2024-03-15 14:05:12 WARN  Health check attempt 2/5 failed: connection refused on port 8080
+2024-03-15 14:05:17 WARN  Health check attempt 3/5 failed: connection refused on port 8080
+2024-03-15 14:05:22 ERROR Application startup exception:
+2024-03-15 14:05:22 ERROR   File "/app/main.py", line 42, in startup_event
+2024-03-15 14:05:22 ERROR     await db_pool.connect(DATABASE_URL)
+2024-03-15 14:05:22 ERROR   asyncpg.exceptions.ConnectionDoesNotExistError: the connection was closed
+2024-03-15 14:05:22 ERROR   During handling of the above, another exception occurred:
+2024-03-15 14:05:22 ERROR   OSError: [Errno 98] Address already in use: ('0.0.0.0', 8080)
+2024-03-15 14:05:22 ERROR Unhandled exception in ASGI lifecycle
+2024-03-15 14:05:23 FATAL Container exited with code 1 — CrashLoopBackOff
+2024-03-15 14:05:23 INFO  Rollback to auth-service v1.7.2 initiated
+

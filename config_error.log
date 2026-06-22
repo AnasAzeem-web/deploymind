@@ -1,0 +1,12 @@
+2024-03-15 16:30:00 INFO  Initializing data-pipeline-worker v3.0.0
+2024-03-15 16:30:01 INFO  Loading application configuration from /etc/app/config.yaml
+2024-03-15 16:30:01 WARN  Configuration file found but environment overrides missing
+2024-03-15 16:30:02 ERROR KeyError: 'AWS_ACCESS_KEY_ID' not found in environment
+2024-03-15 16:30:02 ERROR   File "/app/config/settings.py", line 88, in load_aws_config
+2024-03-15 16:30:02 ERROR     access_key = os.environ['AWS_ACCESS_KEY_ID']
+2024-03-15 16:30:02 ERROR KeyError: 'AWS_ACCESS_KEY_ID'
+2024-03-15 16:30:03 ERROR Additionally, required variable 'AWS_SECRET_ACCESS_KEY' is not set
+2024-03-15 16:30:03 ERROR Additionally, required variable 'S3_BUCKET_NAME' is not set
+2024-03-15 16:30:03 ERROR Configuration validation failed: 3 required environment variables missing
+2024-03-15 16:30:03 FATAL Service startup aborted — invalid configuration state
+2024-03-15 16:30:03 INFO  Hint: Ensure environment variables are injected via Kubernetes Secrets or ConfigMap

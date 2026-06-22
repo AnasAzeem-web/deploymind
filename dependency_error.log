@@ -1,0 +1,12 @@
+2024-03-15 10:22:01 INFO  Starting deployment pipeline for service: payment-service v2.3.1
+2024-03-15 10:22:02 INFO  Pulling base image: python:3.11-slim
+2024-03-15 10:22:05 INFO  Running pip install -r requirements.txt
+2024-03-15 10:22:08 ERROR Collecting packages...
+2024-03-15 10:22:09 ERROR Could not find a version that satisfies the requirement stripe==7.9.0 (from versions: 2.0.0, 3.0.0, 4.0.0, 5.0.0, 6.0.0, 7.0.0, 7.1.0, 7.2.0, 7.3.0)
+2024-03-15 10:22:09 ERROR No matching distribution found for stripe==7.9.0
+2024-03-15 10:22:09 ERROR
+2024-03-15 10:22:10 ERROR pip's dependency resolver does not currently take into account all packages that are installed.
+2024-03-15 10:22:10 WARN  Dependency resolution failed after 3 retries
+2024-03-15 10:22:11 ERROR subprocess exited with status 1
+2024-03-15 10:22:11 FATAL Build step [Install dependencies] FAILED
+2024-03-15 10:22:11 INFO  Pipeline aborted. Total time: 10.4s
